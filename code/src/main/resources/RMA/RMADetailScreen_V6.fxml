@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<ScrollPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RMA.RMADetailsFormController">
+   <content>
+      <VBox fx:id="vbTiltedWrap" prefHeight="1025.0" prefWidth="993.0">
+         <children>
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="33.0" prefWidth="91.0" text="Home" />
+               </children>
+            </HBox>
+            <ProgressBar fx:id="pgRMAProgress" prefHeight="43.0" prefWidth="991.0" progress="0.0" />
+            <HBox prefHeight="945.0" prefWidth="993.0">
+               <children>
+                  <VBox prefHeight="857.0" prefWidth="721.0">
+                     <children>
+                        <TitledPane fx:id="tpInformation" animated="false" prefHeight="384" prefWidth="720.0" text="Information">
+                           <content>
+                              <HBox prefHeight="320.0" prefWidth="718.0">
+                                 <children>
+                                    <VBox prefHeight="237.0" prefWidth="345.0">
+                                       <children>
+                                          <VBox prefHeight="60.0" prefWidth="337.0">
+                                             <children>
+                                                <Label fx:id="lblRmaNumber1" prefHeight="17.0" prefWidth="50.0" text="RMA #" />
+                                                <HBox prefHeight="25.0" prefWidth="337.0">
+                                                   <children>
+                                                      <Label fx:id="lblAutoGenNumber1" prefHeight="25.0" prefWidth="125.0" text="AutoGenerate this label" />
+                                                   </children>
+                                                </HBox>
+                                                <Separator prefHeight="1.0" prefWidth="337.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="23.0" prefWidth="337.0">
+                                             <children>
+                                                <Label fx:id="lblCustomerName1" prefHeight="17.0" prefWidth="148.0" text="*Customer Name " />
+                                                <Hyperlink fx:id="hplCustomerNameDetails1" onAction="#hplCustomerNameDetails1OnAction" prefHeight="23.0" prefWidth="353.0" text="Hyperlink" />
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="29.0" prefWidth="337.0">
+                                             <children>
+                                                <Label fx:id="lblBusinessName1" prefHeight="17.0" prefWidth="148.0" text="*Business Name" />
+                                                <Label fx:id="lblBusinessNameDetails1" prefHeight="17.0" prefWidth="357.0" />
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                          <HBox prefHeight="63.0" prefWidth="342.0">
+                                             <children>
+                                                <VBox prefHeight="37.0" prefWidth="113.0">
+                                                   <children>
+                                                      <Label fx:id="lblRMAAge1" prefHeight="17.0" prefWidth="148.0" text="Age In Days" />
+                                                      <Label fx:id="lblRMAAgeValue1" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="101.0" />
+                                                      <Separator prefWidth="200.0" />
+                                                   </children>
+                                                </VBox>
+                                                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="37.0" prefWidth="51.0" />
+                                                <VBox>
+                                                   <children>
+                                                      <Label fx:id="lblPONumber" prefHeight="11.0" prefWidth="148.0" text="*PO Number" />
+                                                      <Hyperlink fx:id="hplPONumber1" onAction="#hplPONumber1OnAction" prefHeight="29.0" prefWidth="213.0" text="Hyperlink" />
+                                                      <Separator prefWidth="200.0" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <VBox prefHeight="94.0" prefWidth="344.0">
+                                             <children>
+                                                <Label fx:id="lblShippingAddress1" prefHeight="17.0" prefWidth="148.0" text="Shipping Address" />
+                                                <TextArea fx:id="txtShippingAddress1" editable="false" prefHeight="200.0" prefWidth="200.0" />
+                                                <Separator prefHeight="9.0" prefWidth="344.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="29.0" prefWidth="344.0">
+                                             <children>
+                                                <Label fx:id="lblLastModifiedBy1" prefHeight="17.0" prefWidth="162.0" text="Last Modified By" />
+                                                <Label fx:id="lblAutoGenLastModifiedBy1" prefHeight="43.0" prefWidth="344.0" text="Auto generate last modificator, Date" />
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator opacity="0.0" orientation="VERTICAL" prefHeight="237.0" prefWidth="16.0" />
+                                    <VBox prefHeight="315.0" prefWidth="340.0">
+                                       <children>
+                                          <VBox prefHeight="28.0" prefWidth="298.0">
+                                             <children>
+                                                <Label fx:id="lblOwner1" prefHeight="17.0" prefWidth="50.0" text="*Owner" />
+                                                <HBox prefHeight="3.0" prefWidth="315.0">
+                                                   <children>
+                                                      <ComboBox fx:id="cmbEmployeeInfo1" prefHeight="25.0" prefWidth="358.0" />
+                                                   </children>
+                                                </HBox>
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="48.0" prefWidth="339.0">
+                                             <children>
+                                                <Label fx:id="lblRmaStatus1" prefHeight="17.0" prefWidth="148.0" text="*RMA Status" />
+                                                <ComboBox fx:id="cmbRMAStatus1" prefHeight="32.0" prefWidth="339.0" />
+                                                <Separator prefHeight="4.0" prefWidth="339.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="48.0" prefWidth="339.0">
+                                             <children>
+                                                <Label fx:id="lblCreditRepairReplace1" prefHeight="17.0" prefWidth="148.0" text="*Credit, Replace, Repair" />
+                                                <ComboBox fx:id="cmbCreditReplaceRepair1" prefHeight="32.0" prefWidth="339.0" />
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="54.0" prefWidth="339.0">
+                                             <children>
+                                                <Label fx:id="lblReasonCode1" prefHeight="17.0" prefWidth="148.0" text="*Return Reason Code" />
+                                                <ComboBox fx:id="cmbReasonCode1" prefHeight="28.0" prefWidth="339.0" />
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="90.0" prefWidth="339.0">
+                                             <children>
+                                                <Label fx:id="lblSpecialInstruction1" prefHeight="17.0" prefWidth="212.0" text="Additional Info/Special instructions" />
+                                                <HBox prefHeight="75.0" prefWidth="339.0">
+                                                   <children>
+                                                      <TextArea fx:id="txtSpecialInstruction1" editable="false" prefHeight="63.0" prefWidth="296.0" />
+                                                      <Button fx:id="btnSpecialInstructionEdit1" mnemonicParsing="false" onAction="#btnSpecialInstructionEdit1OnAction" prefHeight="70.0" prefWidth="43.0" text="Edit" />
+                                                   </children>
+                                                </HBox>
+                                                <Separator prefHeight="17.0" prefWidth="339.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="32.0" prefWidth="339.0">
+                                             <children>
+                                                <Label fx:id="lblCreatedBy1" prefHeight="17.0" prefWidth="151.0" text="Created By" />
+                                                <Label fx:id="lblAutoGenCreatedBy1" prefHeight="48.0" prefWidth="339.0" text="Auto Generate Creator, Date" />
+                                                <Separator prefHeight="15.0" prefWidth="339.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="tpProductInformation" animated="false" prefHeight="121.0" prefWidth="662.0" text="Product Information (Only 1 product per RMA#)">
+                           <content>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="90.0" prefWidth="345.0">
+                                       <children>
+                                          <VBox prefHeight="90.0" prefWidth="322.0">
+                                             <children>
+                                                <Label fx:id="lblProductName1" prefHeight="17.0" prefWidth="148.0" text="*Product" />
+                                                <ComboBox fx:id="cmbProductDetail1" prefHeight="25.0" prefWidth="347.0" />
+                                                <Separator prefWidth="200.0" />
+                                                <VBox layoutX="10.0" layoutY="55.0" prefHeight="45.0" prefWidth="369.0">
+                                                   <children>
+                                                      <Label fx:id="lblReturnLabelTracking1" prefHeight="17.0" prefWidth="229.0" text="*Return Label Tracking #" />
+                                                      <HBox>
+                                                         <children>
+                                                            <TextField fx:id="txtReturnLabelTracking1" editable="false" prefHeight="25.0" prefWidth="300.0" />
+                                                            <Button fx:id="btnReturnLabelTrackingEdit1" mnemonicParsing="false" onAction="#btnReturnLabelTrackingEdit1OnAction" prefHeight="25.0" prefWidth="43.0" text="Edit" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Separator prefWidth="200.0" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator opacity="0.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="18.0" />
+                                    <VBox prefHeight="90.0" prefWidth="343.0">
+                                       <children>
+                                          <VBox prefHeight="45.0" prefWidth="90.0">
+                                             <children>
+                                                <Label fx:id="lblQuantity1" prefHeight="17.0" prefWidth="229.0" text="*Quantity" />
+                                                <HBox>
+                                                   <children>
+                                                      <TextField fx:id="txtQuantity1" editable="false" prefHeight="25.0" prefWidth="300.0" />
+                                                      <Button fx:id="btnQuantityEdit1" mnemonicParsing="false" onAction="#btnQuantityEdit1OnAction" prefHeight="25.0" prefWidth="43.0" text="Edit" />
+                                                   </children>
+                                                </HBox>
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="tpProductEvaluation" animated="false" prefHeight="215.0" prefWidth="720.0" text="Product Evaluation">
+                           <content>
+                              <VBox prefHeight="188.0" prefWidth="718.0">
+                                 <children>
+                                    <Label fx:id="lblInitialEvaluation1" prefHeight="17.0" prefWidth="229.0" text="*Initial Evaluation" />
+                                    <HBox prefHeight="61.0" prefWidth="699.0">
+                                       <children>
+                                          <TextArea fx:id="txtInitialEvaluation1" editable="false" prefWidth="656.0" />
+                                          <Button fx:id="btnInitialEvaluationEdit1" mnemonicParsing="false" onAction="#btnInitialEvaluationEdit1OnAction" prefHeight="51.0" prefWidth="44.0" text="Edit" />
+                                       </children>
+                                    </HBox>
+                                    <Separator prefHeight="11.0" prefWidth="695.0" />
+                                    <VBox prefHeight="91.0" prefWidth="699.0">
+                                       <children>
+                                          <Label fx:id="lblEngineeringEvaluation1" prefHeight="17.0" prefWidth="229.0" text="*Engineering Evaluation" />
+                                          <HBox prefHeight="45.0" prefWidth="699.0">
+                                             <children>
+                                                <TextArea fx:id="txtEngineeringEvaluation1" editable="false" prefWidth="656.0" />
+                                                <Button fx:id="btnEngineeringEvaluationEdit1" mnemonicParsing="false" onAction="#btnEngineeringEvaluationEdit1OnAction" prefHeight="51.0" prefWidth="44.0" text="Edit" />
+                                             </children>
+                                          </HBox>
+                                          <Separator prefHeight="3.0" prefWidth="695.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="tpProductDisposition" animated="false" prefHeight="150.0" prefWidth="720.0" text="Product Disposition">
+                           <content>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="45.0" prefWidth="345.0">
+                                       <children>
+                                          <VBox prefHeight="45.0" prefWidth="313.0">
+                                             <children>
+                                                <Label fx:id="lblDisposition1" prefHeight="17.0" prefWidth="148.0" text="*Disposition" />
+                                                <ComboBox fx:id="cmbDisposition1" prefHeight="25.0" prefWidth="358.0" />
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator opacity="0.0" orientation="VERTICAL" prefHeight="45.0" prefWidth="12.0" />
+                                    <VBox prefHeight="45.0" prefWidth="345.0">
+                                       <children>
+                                          <VBox prefHeight="71.0" prefWidth="344.0">
+                                             <children>
+                                                <Label fx:id="lblDispositionNotes1" prefHeight="17.0" prefWidth="229.0" text="*Disposition Notes" />
+                                                <HBox>
+                                                   <children>
+                                                      <TextArea fx:id="txtDispositionNotes1" editable="false" prefHeight="54.0" prefWidth="303.0" />
+                                                      <Button fx:id="btnDispositionNotesEdit1" mnemonicParsing="false" onAction="#btnDispositionNotesEdit1OnAction" prefHeight="62.0" prefWidth="43.0" text="Edit" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="tpReplacementDetail" prefHeight="179.0" prefWidth="662.0" text="Replacement Detail">
+                           <content>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="133.0" prefWidth="345.0">
+                                       <children>
+                                          <VBox prefHeight="45.0" prefWidth="399.0">
+                                             <children>
+                                                <Label fx:id="lblReplacementRepairTracking1" prefHeight="17.0" prefWidth="318.0" text="*Replacement/Repaired Product Tracking #" />
+                                                <HBox>
+                                                   <children>
+                                                      <TextField fx:id="txtReplacementRepairTracking1" editable="false" prefHeight="25.0" prefWidth="300.0" />
+                                                      <Button fx:id="btnReplacementRepairTrackingEdit1" mnemonicParsing="false" onAction="#btnReplacementRepairTrackingEdit1OnAction" prefHeight="25.0" prefWidth="43.0" text="Edit" />
+                                                   </children>
+                                                </HBox>
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="64.0" prefWidth="299.0">
+                                             <children>
+                                                <Label fx:id="lblReplacementRepairDate1" prefHeight="17.0" prefWidth="229.0" text="*Replacement/Repaired Product Ship Date" />
+                                                <DatePicker fx:id="dpReplacementRepairDate1" prefHeight="25.0" prefWidth="343.0" />
+                                                <HBox />
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator opacity="0.0" orientation="VERTICAL" prefHeight="314.0" prefWidth="15.0" />
+                                    <VBox prefHeight="133.0" prefWidth="345.0">
+                                       <children>
+                                          <CheckBox fx:id="cbReplacementRepairShip1" mnemonicParsing="false" prefHeight="58.0" prefWidth="366.0" text="*Replacement/Repair Product Ship?">
+                                             <VBox.margin>
+                                                <Insets left="40.0" />
+                                             </VBox.margin></CheckBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </VBox>
+                  <TextArea fx:id="txtDetailsWindow" editable="false" prefHeight="859.0" prefWidth="275.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

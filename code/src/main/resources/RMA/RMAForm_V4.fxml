@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RMA.RMAFormController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0">
+         <children>
+            <SplitPane fx:id="splitpaneRma" dividerPositions="0.3277541083384054, 0.4847839318320146, 0.628119293974437, 0.7641509433962265" orientation="VERTICAL" prefHeight="1123.0" prefWidth="895.0">
+               <items>
+                  <AnchorPane fx:id="pneInformation" minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="920.0">
+                     <children>
+                        <Label fx:id="lblInformation" layoutY="1.0" prefHeight="35.0" prefWidth="894.0" text="  Information" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="59.0" layoutY="74.0" prefHeight="42.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblCustomerName" text="*Customer Name" />
+                              <ComboBox fx:id="cmbCustomerName" onHidden="#cmbCustomerNameOnHidden" prefHeight="25.0" prefWidth="341.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="59.0" layoutY="128.0" prefHeight="42.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblBusinessName" text="*Business Name" />
+                              <ComboBox fx:id="cmbBusinessName" onHidden="#cmbBusinessNameOnHidden" prefHeight="25.0" prefWidth="357.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="59.0" layoutY="188.0" prefHeight="49.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblPoNumber" text="*P. O. Number" />
+                              <ComboBox fx:id="cmbPoNumber" onHidden="#cmbPONumberOnHidden" prefHeight="25.0" prefWidth="357.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="59.0" layoutY="246.0" prefHeight="77.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblShippinAddress" text="Shipping Address" />
+                              <TextArea fx:id="txtShippingAddress" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="501.0" layoutY="128.0" prefHeight="42.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblCreditReplaceRepair" text="*Credit, Replace, Repair?" />
+                              <ComboBox fx:id="cmbCreditReplaceRepair" prefHeight="25.0" prefWidth="334.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="501.0" layoutY="32.0" prefHeight="42.0" prefWidth="166.0">
+                           <children>
+                              <Label fx:id="lblOwner" text="Owner" />
+                              <Label fx:id="lblOwnerValue" prefHeight="17.0" prefWidth="188.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="501.0" layoutY="74.0" prefHeight="42.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblReasonCode" text="*Return Reason Code" />
+                              <ComboBox fx:id="cmbReasonCode" prefHeight="25.0" prefWidth="335.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="501.0" layoutY="191.0" prefHeight="42.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblRMAStatus" text="*RMA Status" />
+                              <ComboBox fx:id="cmbRMAStatus" prefHeight="25.0" prefWidth="334.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="501.0" layoutY="246.0" prefHeight="77.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblAddInfoSpecialInt" text="Additional Info/Special Instructions" />
+                              <TextArea fx:id="txtAddInfoSpecialInt" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="59.0" layoutY="32.0" prefHeight="42.0" prefWidth="166.0">
+                           <children>
+                              <Label fx:id="lblRMANumber" text="RMA #" />
+                              <Label fx:id="lblRMANumberValue" prefHeight="17.0" prefWidth="165.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pneProductInformation" prefHeight="310.0" prefWidth="920.0">
+                     <children>
+                        <Label fx:id="lblProductInfo" layoutX="8.0" prefHeight="42.0" prefWidth="882.0" text="  Product Information (Only 1 product per RMA#)" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="58.0" layoutY="42.0" prefHeight="42.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblProduct" text="*Product" />
+                              <ComboBox fx:id="cmbProduct" prefHeight="25.0" prefWidth="346.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="502.0" layoutY="42.0" prefHeight="42.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblQuantity" text="*Quantity" />
+                              <TextField fx:id="txtQuantity" prefHeight="25.0" prefWidth="337.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="58.0" layoutY="101.0" prefHeight="42.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblReturnLabelTrack" text="Return Label Tracking #" />
+                              <TextField fx:id="txtReturnLabelTrack" prefHeight="25.0" prefWidth="337.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pneProductEvaluation" prefHeight="171.0" prefWidth="893.0">
+                     <children>
+                        <Label fx:id="lblProductEvaluation" prefHeight="35.0" prefWidth="893.0" text="  Product Evaluation" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="59.0" layoutY="45.0" prefHeight="96.0" prefWidth="776.0">
+                           <children>
+                              <Label fx:id="lblInitialEvaluation" text="Initial Evaluation" />
+                              <TextArea fx:id="txtInitialEvaluation" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pneProductDisposition" layoutX="10.0" layoutY="10.0" prefHeight="82.0" prefWidth="920.0">
+                     <children>
+                        <Label fx:id="lblProductDisposition" layoutX="19.0" prefHeight="42.0" prefWidth="882.0" text="  Product Disposition" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="56.0" layoutY="49.0" prefHeight="42.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblDisposition" text="Disposition" />
+                              <ComboBox fx:id="cmbDisposition" prefHeight="25.0" prefWidth="334.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="503.0" layoutY="49.0" prefHeight="84.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblDispositionNotes" text="Disposition Notes" />
+                              <TextArea fx:id="txtDispositionNotes" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pneReplacementInfo" layoutX="10.0" layoutY="10.0" prefHeight="279.0" prefWidth="893.0">
+                     <children>
+                        <Label fx:id="lblReplacementInfo" layoutY="6.0" prefHeight="42.0" prefWidth="882.0" text="  Replacement Information">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="53.0" layoutY="48.0" prefHeight="42.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblReplaceRepairTracking" text="Replacement/Repair Product Tracking #" />
+                              <TextField fx:id="txtReplaceRepairTracking" prefHeight="25.0" prefWidth="337.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="53.0" layoutY="118.0" prefHeight="18.0" prefWidth="330.0">
+                           <children>
+                              <VBox prefHeight="42.0" prefWidth="330.0">
+                                 <children>
+                                    <Label fx:id="lblReplaceRepairShipDate" text="Replacement/Repair Product Ship Date" />
+                                    <DatePicker fx:id="dtpkrReplaceRepairShipDate" prefHeight="25.0" prefWidth="337.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="btnCancel" layoutX="560.0" layoutY="205.0" mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="50.0" prefWidth="100.0" text="Cancel" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="240.0" />
+                        <Button fx:id="btnSave" layoutX="242.0" layoutY="205.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="50.0" prefWidth="100.0" text="Save" AnchorPane.leftAnchor="242.0" AnchorPane.rightAnchor="558.0" />
+                        <CheckBox fx:id="cbShipIndicator" layoutX="504.0" layoutY="69.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="244.0" text="Replacement/Repair Product Ship?" />
+                        <Button fx:id="btnSaveClose" layoutX="397.0" layoutY="205.0" mnemonicParsing="false" onAction="#btnSaveCloseAction" prefHeight="50.0" prefWidth="100.0" text="Save &amp; Close" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
